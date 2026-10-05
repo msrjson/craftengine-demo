@@ -16,4 +16,4 @@ def show(request: Any) -> Response:
 
 def register(router: object) -> None:
     """Register the dashboard, behind sign-in."""
-    router.get("/dashboard", show).name("dashboard.index").middleware("auth")
+    router.get("/overview", show).name("dashboard.index").middleware("auth")

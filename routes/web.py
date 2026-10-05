@@ -12,8 +12,8 @@ from craft.http.response import redirect
 
 
 def home(request: Any) -> Any:
-    """Send the visitor to the dashboard (which asks them to sign in first)."""
-    return redirect("/dashboard")
+    """Send the visitor to the CRM overview (which asks them to sign in first)."""
+    return redirect("/overview")
 
 
 Route.get("/", home).name("home")

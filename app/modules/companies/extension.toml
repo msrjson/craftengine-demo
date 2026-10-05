@@ -1,0 +1,5 @@
+slug = "companies"
+kind = "module"
+version = "1.0.0"
+engine = ">=4.4,<5"
+name_key = "companies.extension.name"

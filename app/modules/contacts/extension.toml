@@ -1,0 +1,9 @@
+slug = "contacts"
+kind = "module"
+version = "1.0.0"
+engine = ">=4.4,<5"
+name_key = "contacts.extension.name"
+
+# Company names come through the internal proxy - never an import.
+[requires]
+companies = ">=1.0,<2"

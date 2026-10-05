@@ -1,0 +1,5 @@
+slug = "audit_log"
+kind = "plugin"
+version = "2.0.0"
+engine = ">=4.4,<5"
+name_key = "audit_log.extension.name"

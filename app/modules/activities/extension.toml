@@ -1,0 +1,10 @@
+slug = "activities"
+kind = "module"
+version = "1.0.0"
+engine = ">=4.4,<5"
+name_key = "activities.extension.name"
+
+# Contact names come through the internal proxy; a won deal arrives as the
+# event `crm.deal.won` - the deals module is never imported.
+[requires]
+contacts = ">=1.0,<2"

@@ -1,0 +1,53 @@
+{
+  "en": {
+    "audit_log.extension.name": "Audit trail",
+    "audit_log.index.title": "Audit trail",
+    "audit_log.index.privacy": "Entries hold identifiers only - no names, emails or contents.",
+    "audit_log.index.empty": "Nothing recorded yet.",
+    "audit_log.field.when": "When",
+    "audit_log.field.event": "Event",
+    "audit_log.field.table": "Table",
+    "audit_log.field.record": "Record",
+    "audit_log.field.actor": "User",
+    "audit_log.event.model_created": "Created",
+    "audit_log.event.model_updated": "Updated",
+    "audit_log.event.model_deleted": "Deleted",
+    "audit_log.event.auth_login": "Signed in",
+    "audit_log.event.auth_logout": "Signed out",
+    "audit_log.event.auth_failed": "Failed sign-in"
+  },
+  "pt-BR": {
+    "audit_log.extension.name": "Trilha de auditoria",
+    "audit_log.index.title": "Trilha de auditoria",
+    "audit_log.index.privacy": "Os registros guardam só identificadores - nenhum nome, e-mail ou conteúdo.",
+    "audit_log.index.empty": "Nada registrado ainda.",
+    "audit_log.field.when": "Quando",
+    "audit_log.field.event": "Evento",
+    "audit_log.field.table": "Tabela",
+    "audit_log.field.record": "Registro",
+    "audit_log.field.actor": "Usuário",
+    "audit_log.event.model_created": "Criado",
+    "audit_log.event.model_updated": "Atualizado",
+    "audit_log.event.model_deleted": "Excluído",
+    "audit_log.event.auth_login": "Entrou",
+    "audit_log.event.auth_logout": "Saiu",
+    "audit_log.event.auth_failed": "Falha ao entrar"
+  },
+  "es": {
+    "audit_log.extension.name": "Registro de auditoría",
+    "audit_log.index.title": "Registro de auditoría",
+    "audit_log.index.privacy": "Los registros guardan solo identificadores: ningún nombre, correo ni contenido.",
+    "audit_log.index.empty": "Nada registrado todavía.",
+    "audit_log.field.when": "Cuándo",
+    "audit_log.field.event": "Evento",
+    "audit_log.field.table": "Tabla",
+    "audit_log.field.record": "Registro",
+    "audit_log.field.actor": "Usuario",
+    "audit_log.event.model_created": "Creado",
+    "audit_log.event.model_updated": "Actualizado",
+    "audit_log.event.model_deleted": "Eliminado",
+    "audit_log.event.auth_login": "Inició sesión",
+    "audit_log.event.auth_logout": "Cerró sesión",
+    "audit_log.event.auth_failed": "Inicio de sesión fallido"
+  }
+}

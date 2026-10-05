@@ -1,0 +1,51 @@
+# The CRM demo, its own context: own repository, own containers, own database.
+# Validating the framework never starts these, and these never mount the
+# framework (owner ruling 2026-10-05).
+#
+#   app  craftengine-demo     http://localhost:9002
+#   db   craftengine-demo-db  PostgreSQL 18, host port 5500
+
+services:
+  app:
+    build: .
+    container_name: craftengine-demo
+    env_file: .env
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE:-crm_demo}
+      DB_USERNAME: ${DB_USERNAME:-crm}
+      DB_PASSWORD: ${DB_PASSWORD:-crm_demo_secret}
+      # The local database speaks no TLS; production sets require/verify-full.
+      DB_SSLMODE: disable
+    ports:
+      - "9002:9002"
+    volumes:
+      # Source mounted for development; the engine stays the installed release.
+      - ./:/app
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: postgres:18-alpine
+    container_name: craftengine-demo-db
+    environment:
+      POSTGRES_USER: ${DB_USERNAME:-crm}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-crm_demo_secret}
+      POSTGRES_DB: ${DB_DATABASE:-crm_demo}
+    ports:
+      - "5500:5432"
+    volumes:
+      - craftengine_demo_db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-crm} -d ${DB_DATABASE:-crm_demo}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+volumes:
+  craftengine_demo_db_data:

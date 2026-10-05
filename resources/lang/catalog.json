@@ -1,0 +1,29 @@
+{
+  "en": {
+    "crm.app.name": "Craft CRM",
+    "crm.layout.skip_to_content": "Skip to content",
+    "crm.layout.main_navigation": "Main navigation",
+    "crm.layout.sign_out": "Sign out",
+    "crm.pagination.label": "Pages",
+    "crm.pagination.previous": "Previous",
+    "crm.pagination.next": "Next"
+  },
+  "pt-BR": {
+    "crm.app.name": "Craft CRM",
+    "crm.layout.skip_to_content": "Pular para o conteúdo",
+    "crm.layout.main_navigation": "Navegação principal",
+    "crm.layout.sign_out": "Sair",
+    "crm.pagination.label": "Páginas",
+    "crm.pagination.previous": "Anterior",
+    "crm.pagination.next": "Próxima"
+  },
+  "es": {
+    "crm.app.name": "Craft CRM",
+    "crm.layout.skip_to_content": "Saltar al contenido",
+    "crm.layout.main_navigation": "Navegación principal",
+    "crm.layout.sign_out": "Cerrar sesión",
+    "crm.pagination.label": "Páginas",
+    "crm.pagination.previous": "Anterior",
+    "crm.pagination.next": "Siguiente"
+  }
+}

@@ -1,0 +1,9 @@
+slug = "deals"
+kind = "module"
+version = "1.0.0"
+engine = ">=4.4,<5"
+name_key = "deals.extension.name"
+
+# Contact names come through the internal proxy - never an import.
+[requires]
+contacts = ">=1.0,<2"

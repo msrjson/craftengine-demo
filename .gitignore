@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/app/*
+!storage/**/.gitkeep
+*.sqlite
+*.sqlite3

@@ -1,0 +1,20 @@
+{
+  "en": {
+    "dashboard.extension.name": "Dashboard",
+    "dashboard.nav.label": "Dashboard",
+    "dashboard.index.title": "Overview",
+    "dashboard.index.empty": "No module is active yet. Activate one in the extension manager."
+  },
+  "pt-BR": {
+    "dashboard.extension.name": "Painel",
+    "dashboard.nav.label": "Painel",
+    "dashboard.index.title": "Visão geral",
+    "dashboard.index.empty": "Nenhum módulo ativo ainda. Ative um no gerenciador de extensões."
+  },
+  "es": {
+    "dashboard.extension.name": "Panel",
+    "dashboard.nav.label": "Panel",
+    "dashboard.index.title": "Resumen",
+    "dashboard.index.empty": "Ningún módulo activo todavía. Activa uno en el gestor de extensiones."
+  }
+}

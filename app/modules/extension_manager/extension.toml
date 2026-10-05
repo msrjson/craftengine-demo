@@ -1,0 +1,8 @@
+slug = "extension_manager"
+kind = "module"
+version = "1.0.0"
+engine = ">=4.4,<5"
+name_key = "extension_manager.extension.name"
+# Uses only the engine's ExtensionManager - the same one `dev.py extension`
+# drives. It gains no privilege the CLI lacks, and if it fails the rest of
+# the CRM keeps serving; the CLI stays the way back in.

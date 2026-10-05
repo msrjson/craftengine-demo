@@ -1,0 +1,7 @@
+slug = "dashboard"
+kind = "module"
+version = "1.0.0"
+engine = ">=4.4,<5"
+name_key = "dashboard.extension.name"
+# No [requires]: every module adds its own card through the
+# `crm.dashboard.cards` filter, so the dashboard shows whatever is active.

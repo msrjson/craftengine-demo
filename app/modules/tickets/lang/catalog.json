@@ -1,0 +1,20 @@
+{
+  "en": {
+    "tickets.extension.name": "Tickets",
+    "tickets.index.title": "Tickets",
+    "tickets.index.empty": "Nothing here yet.",
+    "tickets.index.count": "{count, plural, =0 {No tickets yet} one {# ticket} other {# tickets}}"
+  },
+  "pt-BR": {
+    "tickets.extension.name": "Tickets",
+    "tickets.index.title": "Tickets",
+    "tickets.index.empty": "Nada por aqui ainda.",
+    "tickets.index.count": "{count, plural, =0 {Nenhum chamado ainda} one {# chamado} other {# chamados}}"
+  },
+  "es": {
+    "tickets.extension.name": "Tickets",
+    "tickets.index.title": "Tickets",
+    "tickets.index.empty": "Todavía no hay nada aquí.",
+    "tickets.index.count": "{count, plural, =0 {Aún no hay tickets} one {# ticket} other {# tickets}}"
+  }
+}

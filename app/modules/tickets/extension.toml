@@ -1,0 +1,9 @@
+slug = "tickets"
+kind = "module"
+version = "0.1.0"
+engine = ">=4.0,<5"
+name_key = "tickets.extension.name"
+
+# Other extensions this module needs, slug = version range. Reach them only
+# through the internal proxy or events - never by importing their code.
+[requires]

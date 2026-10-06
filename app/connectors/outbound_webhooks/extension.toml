@@ -1,0 +1,10 @@
+slug = "outbound_webhooks"
+kind = "connector"
+version = "0.1.0"
+engine = ">=4.0,<5"
+name_key = "outbound_webhooks.extension.name"
+
+# A connector is headless: no views and no assets. It may ship `routes.py`
+# for inbound webhooks. Other extensions reach it through the internal proxy
+# or events - never by importing its code.
+[requires]

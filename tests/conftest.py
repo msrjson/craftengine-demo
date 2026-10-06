@@ -22,7 +22,8 @@ if os.environ.get("CRM_TEST_DB") != "pgsql":
 import engine  # noqa: E402,F401  installs the `craft.*` import alias, as bootstrap/app.py does
 
 #: Install order follows the dependencies declared in each manifest.
-EXTENSIONS = ("companies", "contacts", "deals", "activities", "dashboard", "audit_log", "harbor", "extension_manager")
+EXTENSIONS = ("companies", "contacts", "deals", "activities", "dashboard", "audit_log", "harbor", "extension_manager",
+              "tickets", "invoices", "activity_digest", "midnight", "outbound_webhooks")
 
 
 @pytest.fixture(scope="session", autouse=True)

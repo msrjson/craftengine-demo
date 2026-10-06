@@ -1,0 +1,20 @@
+{
+  "en": {
+    "invoices.extension.name": "Invoices",
+    "invoices.index.title": "Invoices",
+    "invoices.index.empty": "Nothing here yet.",
+    "invoices.index.count": "{count, plural, =0 {No invoices yet} one {# invoice} other {# invoices}}"
+  },
+  "pt-BR": {
+    "invoices.extension.name": "Invoices",
+    "invoices.index.title": "Invoices",
+    "invoices.index.empty": "Nada por aqui ainda.",
+    "invoices.index.count": "{count, plural, =0 {Nenhuma fatura ainda} one {# fatura} other {# faturas}}"
+  },
+  "es": {
+    "invoices.extension.name": "Invoices",
+    "invoices.index.title": "Invoices",
+    "invoices.index.empty": "Todavía no hay nada aquí.",
+    "invoices.index.count": "{count, plural, =0 {Aún no hay facturas} one {# factura} other {# facturas}}"
+  }
+}

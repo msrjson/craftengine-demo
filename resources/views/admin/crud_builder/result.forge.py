@@ -16,6 +16,7 @@
 @section("title", __('admin.crud_builder.result.title'))
 
 @section("content")
+@include("partials.engine_update_alert")
 <div class="max-w-4xl bg-white border border-slate-200/80 rounded-3xl p-8 shadow-sm space-y-6">
     <div class="flex items-center justify-between">
         <div>

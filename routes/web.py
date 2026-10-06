@@ -57,3 +57,17 @@ Route.post("/admin/groups/roles", [GroupController, "grant_role"]).middleware("a
 Route.post("/admin/groups/permissions", [GroupController, "grant_permission"]).middleware("auth", "role:admin").name(
     "admin.groups.permissions"
 )
+
+# Engine Update Routes (make:engine-panel)
+from app.Http.Controllers.Admin.EngineUpdateController import EngineUpdateController
+
+Route.get("/admin/engine", [EngineUpdateController, "index"]).middleware("auth", "role:admin").name("admin.engine.index")
+Route.post("/admin/engine/check", [EngineUpdateController, "check"]).middleware("auth", "role:admin").name(
+    "admin.engine.check"
+)
+Route.get("/admin/engine/review", [EngineUpdateController, "review"]).middleware("auth", "role:admin").name(
+    "admin.engine.review"
+)
+Route.post("/admin/engine/apply", [EngineUpdateController, "apply"]).middleware("auth", "role:admin").name(
+    "admin.engine.apply"
+)

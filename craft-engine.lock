@@ -6,13 +6,14 @@
   "pin_files": [
     "Dockerfile"
   ],
-  "ref": "v4.4.2-r00024",
-  "release": "r00024",
+  "ref": "v4.5.0-r00025",
+  "release": "r00025",
   "schema": 1,
   "source": {
     "archive_url": "https://github.com/msrjson/craftengine/archive/{ref}.tar.gz",
     "subdirectory": "data",
     "tags_url": "https://api.github.com/repos/msrjson/craftengine/tags?per_page=100"
   },
-  "version": "4.4.2"
+  "verify_command": "",
+  "version": "4.5.0"
 }

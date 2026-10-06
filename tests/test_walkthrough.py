@@ -33,9 +33,12 @@ def admin(crm: Any) -> Any:
     """A signed-in administrator, registered through the real form."""
     from starlette.testclient import TestClient
 
-    from bootstrap.app import asgi_app
+    from bootstrap.app import app, asgi_app
 
-    client = TestClient(asgi_app, follow_redirects=False)
+    # The browser's view: requests and Referer carry the configured APP_URL,
+    # which is what the CSRF origin check compares against.
+    base_url = str(app.make("config").get("app.APP_URL", "http://testserver") or "http://testserver").rstrip("/")
+    client = TestClient(asgi_app, follow_redirects=False, base_url=base_url)
     page = client.get("/register")
     assert page.status_code == 200
     registered = client.post("/register", data={
@@ -77,7 +80,8 @@ def test_the_sales_flow(admin: Any) -> None:
 
 
 def test_an_invalid_form_returns_to_it(admin: Any) -> None:
-    response = admin.post("/companies", data={"_token": _token(admin.get("/companies/create").text), "name": ""}, headers={"referer": "http://testserver/companies/create"})
+    referer = str(admin.base_url).rstrip("/") + "/companies/create"
+    response = admin.post("/companies", data={"_token": _token(admin.get("/companies/create").text), "name": ""}, headers={"referer": referer})
     assert response.status_code in (302, 303)
     assert response.headers["location"].endswith("/companies/create")
 

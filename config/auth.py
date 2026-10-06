@@ -21,7 +21,7 @@ guards = {
 # empty rather than naming a class that does not exist.
 providers = {
     "users": {
-        "model": "",
+        "model": "app.Models.User.User",
     },
 }
 
@@ -32,8 +32,8 @@ providers = {
 #
 # `craft make:auth` writes the user entry. `craft make:admin` writes the rest.
 models = {
-    "user": "",
-    "role": "",
-    "permission": "",
-    "group": "",
+    "user": "app.Models.User.User",
+    "role": "app.Models.Role.Role",
+    "permission": "app.Models.Permission.Permission",
+    "group": "app.Models.Group.Group",
 }

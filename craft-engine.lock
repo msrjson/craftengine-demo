@@ -1,0 +1,18 @@
+{
+  "engine_path": "engine",
+  "manifest": {},
+  "mode": "package",
+  "patches": [],
+  "pin_files": [
+    "Dockerfile"
+  ],
+  "ref": "v4.4.2-r00024",
+  "release": "r00024",
+  "schema": 1,
+  "source": {
+    "archive_url": "https://github.com/msrjson/craftengine/archive/{ref}.tar.gz",
+    "subdirectory": "data",
+    "tags_url": "https://api.github.com/repos/msrjson/craftengine/tags?per_page=100"
+  },
+  "version": "4.4.2"
+}

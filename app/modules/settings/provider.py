@@ -6,5 +6,5 @@ from .services.settings_service import SettingsService
 def register(context: object) -> None:
     """Bind the service and add the menu entries."""
     context.app.singleton(SettingsService, lambda c: SettingsService())
-    context.filter("crm.navigation", lambda items: [*items, {"route": "settings.menus", "label_key": "settings.menus.nav"}], priority=97)
-    context.filter("crm.navigation", lambda items: [*items, {"route": "settings.index", "label_key": "settings.nav.label"}], priority=99)
+    context.filter("crm.navigation", lambda items: [*items, {"route": "settings.menus", "label_key": "settings.menus.nav", "icon": "menus"}], priority=97)
+    context.filter("crm.navigation", lambda items: [*items, {"route": "settings.index", "label_key": "settings.nav.label", "icon": "settings"}], priority=99)

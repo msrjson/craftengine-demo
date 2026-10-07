@@ -45,9 +45,12 @@ main { max-width: 1200px; margin: 0 auto; padding: var(--gap); }
 .admin-shell { display: flex; align-items: stretch; min-height: calc(100vh - 48px); }
 .admin-menu { flex: 0 0 200px; background: var(--menu); color: var(--menu-text); }
 .admin-menu__list { list-style: none; margin: 0; padding: var(--space-2) 0; }
-.admin-menu__link { display: block; padding: var(--space-3) var(--space-4); color: var(--menu-text); text-decoration: none; border-left: 4px solid transparent; }
+.admin-menu__link { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); color: var(--menu-text); text-decoration: none; border-left: 4px solid transparent; }
+.admin-menu__icon { width: 20px; height: 20px; flex: 0 0 auto; }
 .admin-menu__link:hover, .admin-menu__link:focus-visible { background: var(--bar-hover); color: #fff; }
-.admin-content { flex: 1 1 auto; min-width: 0; background: var(--workspace); padding: var(--space-6); }
+.admin-content { flex: 1 1 auto; min-width: 0; background: var(--workspace); padding: var(--space-6); max-width: none; margin: 0; }
+/* A wide table scrolls inside the workspace instead of widening the page. */
+.admin-content .table { display: block; overflow-x: auto; white-space: nowrap; }
 .admin-content > h1:first-child { margin-top: 0; }
 body.is-menu-collapsed .admin-menu { display: none; }
 
@@ -112,9 +115,11 @@ button:focus-visible, .button:focus-visible, input:focus-visible, select:focus-v
 
 /* --- Dashboard widgets (WordPress-style boxes) ----------------------------- */
 .dash { display: grid; gap: var(--gap); grid-template-columns: 1fr; align-items: start; }
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   .dash { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .dash-widget--activity { grid-column: 2; grid-row: 1 / span 2; }
+}
+@media (min-width: 80rem) {
+  .dash { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .dash-widget { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .dash-widget__head { font-size: 1rem; margin: 0; padding: 12px var(--gap); border-bottom: 1px solid var(--line); background: var(--bg); }
@@ -143,3 +148,7 @@ button:focus-visible, .button:focus-visible, input:focus-visible, select:focus-v
 /* --- Small form extras ----------------------------------------------------- */
 .muted { color: var(--muted); }
 .form .checkbox { display: flex; align-items: center; gap: var(--space-2); }
+
+/* --- Extension manager subgroups ------------------------------------------- */
+.kind-group { margin: 0 0 var(--space-6); }
+.kind-group__head { font-size: 1.05rem; margin: 0 0 var(--space-3); display: flex; align-items: baseline; gap: var(--space-3); }

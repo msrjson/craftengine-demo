@@ -9,6 +9,7 @@
 </head>
 <body class="theme-harbor">
   <a class="skip-link" href="#main">{{ __('crm.layout.skip_to_content') }}</a>
+  @include("partials.icons")
 
   <header class="admin-bar">
     <a class="admin-bar__site" href="/">{{ setting('site_name') or __('crm.app.name') }}</a>
@@ -39,7 +40,12 @@
       <ul class="admin-menu__list">
       @foreach(item in navigation())
         <li class="admin-menu__item">
-          <a class="admin-menu__link" href="{{ route(item.route) }}">{{ __(item.label_key) }}</a>
+          <a class="admin-menu__link" href="{{ route(item.route) }}">
+            <svg class="admin-menu__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <use href="#icon-{{ item.icon or 'dot' }}"></use>
+            </svg>
+            <span>{{ __(item.label_key) }}</span>
+          </a>
         </li>
       @endforeach
       </ul>

@@ -12,7 +12,7 @@ def register(context: object) -> None:
     context.app.singleton(DealRepository, lambda c: DealRepository())
     context.app.singleton(DealService, lambda c: DealService(c.make(DealRepository), c.make("events")))
     context.expose("deals", DealService, {"summary"})
-    context.filter("crm.navigation", lambda items: [*items, {"route": "deals.index", "label_key": "deals.nav.label"}], priority=40)
+    context.filter("crm.navigation", lambda items: [*items, {"route": "deals.index", "label_key": "deals.nav.label", "icon": "deals"}], priority=40)
     context.filter("crm.dashboard.cards", lambda cards: [*cards, *_cards(context)], priority=40)
 
 

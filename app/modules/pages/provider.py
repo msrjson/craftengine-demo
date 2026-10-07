@@ -9,7 +9,7 @@ def register(context: object) -> None:
     context.app.singleton(PageRepository, lambda c: PageRepository())
     context.app.singleton(PageService, lambda c: PageService(c.make(PageRepository)))
     context.expose("pages", PageService, {"publish", "unpublish", "count_published"})
-    context.filter("crm.navigation", lambda items: [*items, {"route": "pages.index", "label_key": "pages.nav.label"}], priority=16)
+    context.filter("crm.navigation", lambda items: [*items, {"route": "pages.index", "label_key": "pages.nav.label", "icon": "pages"}], priority=16)
     context.filter(
         "crm.dashboard.cards",
         lambda cards: [*cards, {"label_key": "pages.card.published", "value": context.app.make(PageService).count_published(), "route": "pages.index"}],

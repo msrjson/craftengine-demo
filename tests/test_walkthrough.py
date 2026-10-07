@@ -101,3 +101,17 @@ def test_the_panel_switches_a_module_off_and_on(admin: Any) -> None:
     finally:
         _post(admin, "/admin/extensions", "/admin/extensions/dashboard/activate", {})
     assert admin.get("/overview").status_code == 200
+
+
+def test_the_extension_panel_groups_by_kind(admin: Any) -> None:
+    html = admin.get("/admin/extensions").text
+    for kind in ("module", "plugin", "theme", "connector"):
+        assert f'id="kind-{kind}"' in html
+    assert "outbound_webhooks" in html
+
+
+def test_every_menu_item_carries_its_own_icon(admin: Any) -> None:
+    html = admin.get("/overview").text
+    assert 'class="admin-menu__icon"' in html
+    assert 'href="#icon-dashboard"' in html and 'href="#icon-settings"' in html
+    assert 'href="#icon-dot"' not in html

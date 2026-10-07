@@ -15,7 +15,7 @@ def register(context: object) -> None:
 
 def _navigation(items: list) -> list:
     """Add the companies entry to the menu."""
-    return [*items, {"route": "companies.index", "label_key": "companies.nav.label"}]
+    return [*items, {"route": "companies.index", "label_key": "companies.nav.label", "icon": "companies"}]
 
 
 def _card(context: object) -> dict:

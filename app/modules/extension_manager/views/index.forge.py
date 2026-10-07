@@ -23,10 +23,13 @@
 </section>
 @endif
 
-@foreach(kind in ['module', 'plugin', 'theme'])
-<section aria-labelledby="kind-{{ kind }}">
-  <h2 id="kind-{{ kind }}">{{ __('extension_manager.kind.' ~ kind) }}</h2>
-  @if(groups[kind])
+@foreach(kind in kinds)
+@if(groups[kind])
+<section class="kind-group" aria-labelledby="kind-{{ kind }}">
+  <h2 id="kind-{{ kind }}" class="kind-group__head">
+    <span>{{ __('extension_manager.kind.' ~ kind) }}</span>
+    <span class="count">{{ groups[kind]|length }}</span>
+  </h2>
   <table class="table">
     <thead><tr>
       <th>{{ __('extension_manager.field.name') }}</th><th>{{ __('extension_manager.field.version') }}</th>
@@ -53,14 +56,12 @@
     @endforeach
     </tbody>
   </table>
-  @else
-  <p class="empty">{{ __('extension_manager.index.none') }}</p>
-  @endif
 </section>
+@endif
 @endforeach
 
-<section aria-labelledby="theme-title">
-  <h2 id="theme-title">{{ __('extension_manager.theme.title') }}</h2>
+<section class="kind-group" aria-labelledby="theme-title">
+  <h2 id="theme-title" class="kind-group__head">{{ __('extension_manager.theme.title') }}</h2>
   <form method="POST" action="{{ route('extension_manager.theme') }}" class="form">
     @csrf
     <label for="theme">{{ __('extension_manager.theme.label') }}</label>

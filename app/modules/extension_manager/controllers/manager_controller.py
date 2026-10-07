@@ -9,6 +9,9 @@ from craft.http.response import redirect
 #: Lifecycle actions the panel offers, mapped to the manager's methods.
 ACTIONS = ("install", "activate", "deactivate", "uninstall")
 
+#: The kinds the panel groups by, in the order it renders them.
+KINDS = ("module", "plugin", "theme", "connector")
+
 
 class ManagerController(Controller):
     """Thin HTTP layer over the engine's `ExtensionManager`."""
@@ -18,7 +21,8 @@ class ManagerController(Controller):
         manager = self._manager()
         rows = manager.status()
         return self.view("extension_manager::index", {
-            "groups": {kind: [row for row in rows if row["kind"] == kind] for kind in ("module", "plugin", "theme")},
+            "groups": {kind: [row for row in rows if row["kind"] == kind] for kind in KINDS},
+            "kinds": KINDS,
             "refused": [{"path": path, "code": error.code} for path, error in manager.discovery_errors.items()],
             "theme": self._theme()(),
         })

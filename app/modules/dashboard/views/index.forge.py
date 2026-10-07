@@ -50,32 +50,20 @@
   <section class="dash-widget dash-widget--draft" aria-labelledby="draft-title">
     <h2 id="draft-title" class="dash-widget__head">{{ __('dashboard.widget.quick_draft.title') }}</h2>
     <div class="dash-widget__body">
-    @if(contacts)
+    @if(drafts_ready)
       <form method="POST" action="{{ route('dashboard.draft') }}" class="draft">
         @csrf
         <div class="field">
-          <label for="draft-contact">{{ __('dashboard.widget.quick_draft.contact') }}</label>
-          <select id="draft-contact" name="contact_id" required>
-            @foreach(option in contacts)
-            <option value="{{ option.id }}">{{ option.name }}</option>
-            @endforeach
-          </select>
-        </div>
-        <div class="field">
-          <label for="draft-kind">{{ __('dashboard.widget.quick_draft.kind') }}</label>
-          <select id="draft-kind" name="kind">
-            @foreach(kind in kinds)
-            <option value="{{ kind }}">{{ __('activities.kind.' ~ kind) }}</option>
-            @endforeach
-          </select>
-        </div>
-        <div class="field">
-          <label for="draft-subject">{{ __('dashboard.widget.quick_draft.subject') }}</label>
-          <input type="text" id="draft-subject" name="subject" maxlength="160" required
-                 value="{{ old('subject', '') }}" @error('subject') aria-invalid="true" @enderror>
-          @error('subject')
+          <label for="draft-title-field">{{ __('posts.field.title') }}</label>
+          <input type="text" id="draft-title-field" name="title" maxlength="160" required
+                 value="{{ old('title', '') }}" @error('title') aria-invalid="true" @enderror>
+          @error('title')
           <p class="field__error" role="alert">{{ message }}</p>
           @enderror
+        </div>
+        <div class="field">
+          <label for="draft-body">{{ __('posts.field.body') }}</label>
+          <textarea id="draft-body" name="body" rows="5">{{ old('body', '') }}</textarea>
         </div>
         <button type="submit" class="button button--primary">{{ __('dashboard.widget.quick_draft.save') }}</button>
       </form>

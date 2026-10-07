@@ -8,11 +8,9 @@
     "dashboard.widget.activity.title": "Activity",
     "dashboard.widget.activity.empty": "No activity yet. Schedule one from Activities.",
     "dashboard.widget.quick_draft.title": "Quick Draft",
-    "dashboard.widget.quick_draft.contact": "Contact",
-    "dashboard.widget.quick_draft.kind": "Kind",
-    "dashboard.widget.quick_draft.subject": "Subject",
+    "dashboard.widget.quick_draft.body": "Content",
     "dashboard.widget.quick_draft.save": "Save draft",
-    "dashboard.widget.quick_draft.none": "Add a contact before drafting."
+    "dashboard.widget.quick_draft.none": "Posts must be active to draft."
   },
   "pt-BR": {
     "dashboard.extension.name": "Painel",
@@ -23,11 +21,9 @@
     "dashboard.widget.activity.title": "Atividade",
     "dashboard.widget.activity.empty": "Nenhuma atividade ainda. Agende uma em Atividades.",
     "dashboard.widget.quick_draft.title": "Rascunho rápido",
-    "dashboard.widget.quick_draft.contact": "Contato",
-    "dashboard.widget.quick_draft.kind": "Tipo",
-    "dashboard.widget.quick_draft.subject": "Assunto",
+    "dashboard.widget.quick_draft.body": "Conteúdo",
     "dashboard.widget.quick_draft.save": "Salvar rascunho",
-    "dashboard.widget.quick_draft.none": "Cadastre um contato antes de rascunhar."
+    "dashboard.widget.quick_draft.none": "Os posts precisam estar ativos para rascunhar."
   },
   "es": {
     "dashboard.extension.name": "Panel",
@@ -38,10 +34,8 @@
     "dashboard.widget.activity.title": "Actividad",
     "dashboard.widget.activity.empty": "Todavía no hay actividad. Programa una en Actividades.",
     "dashboard.widget.quick_draft.title": "Borrador rápido",
-    "dashboard.widget.quick_draft.contact": "Contacto",
-    "dashboard.widget.quick_draft.kind": "Tipo",
-    "dashboard.widget.quick_draft.subject": "Asunto",
+    "dashboard.widget.quick_draft.body": "Contenido",
     "dashboard.widget.quick_draft.save": "Guardar borrador",
-    "dashboard.widget.quick_draft.none": "Añade un contacto antes de borrar."
+    "dashboard.widget.quick_draft.none": "Las entradas deben estar activas para borrar."
   }
 }

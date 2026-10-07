@@ -1,10 +1,9 @@
 """Slice 2 of the WordPress-style admin: the dashboard widgets.
 
-At a Glance, Activity and Quick Draft. The draft goes through the activities
-module's proxy surface, so the dashboard never imports another module.
+At a Glance, Activity and Quick Draft. The draft becomes a post, through the
+posts module's proxy surface, so the dashboard never imports another module.
 """
 
-import importlib
 import os
 import re
 import subprocess
@@ -12,6 +11,8 @@ import sys
 from typing import Any
 
 import pytest
+
+from craft.facades import DB
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EMAIL = "widgets@crm.admin.test"
@@ -21,14 +22,6 @@ PASSWORD = "s3cret-Passw0rd!"
 def _token(html: str) -> str:
     found = re.search(r'name="_token" value="([^"]+)"', html)
     return found.group(1) if found else ""
-
-
-def _service(app: Any, module: str, name: str) -> Any:
-    package, cls = {
-        "companies": ("companies.services.company_service", "CompanyService"),
-        "contacts": ("contacts.services.contact_service", "ContactService"),
-    }[module]
-    return app.make(getattr(importlib.import_module(f"app.modules.{package}"), cls))
 
 
 @pytest.fixture(scope="module")
@@ -63,17 +56,18 @@ class TestDashboardWidgets:
         page = admin.get("/overview").text
         assert "dashboard.widget." not in page
 
-    def test_a_quick_draft_schedules_an_activity(self, admin: Any, crm: Any) -> None:
-        company = _service(crm, "companies", "service").create({"name": "Widget Co", "industry": "retail"})
-        contact = _service(crm, "contacts", "service").create({"first_name": "Widget", "last_name": "Target", "company_id": company})
-        page = admin.get("/overview").text
-        draft = admin.post("/overview/draft", data={
-            "_token": _token(page), "contact_id": str(contact), "kind": "note", "subject": "Rascunho da visao geral",
+    def test_a_quick_draft_creates_a_post_draft(self, admin: Any) -> None:
+        title = "Rascunho rapido de teste"
+        created = admin.post("/overview/draft", data={
+            "_token": _token(admin.get("/overview").text), "title": title, "body": "Um corpo curto.",
         })
-        assert draft.status_code in (302, 303), draft.text[:300]
-        assert "Rascunho da visao geral" in admin.get("/overview").text
+        assert created.status_code in (302, 303), created.text[:300]
+        assert created.headers["location"].endswith("/posts")
+        row = DB.table("crm_posts").where("title", title).first()
+        assert row is not None and row["status"] == "draft"
+        assert title in admin.get("/posts").text
 
     def test_a_blank_draft_is_refused(self, admin: Any) -> None:
-        page = admin.get("/overview").text
-        draft = admin.post("/overview/draft", data={"_token": _token(page), "contact_id": "", "kind": "note", "subject": ""})
-        assert draft.status_code in (302, 303)
+        refused = admin.post("/overview/draft", data={"_token": _token(admin.get("/overview").text), "title": "", "body": ""})
+        assert refused.status_code in (302, 303)
+        assert refused.headers["location"].endswith("/overview")

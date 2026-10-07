@@ -10,6 +10,7 @@ layout.
 from typing import Any
 
 from craft.providers import ServiceProvider
+from craft.support.settings import setting
 
 
 class AppServiceProvider(ServiceProvider):
@@ -19,10 +20,13 @@ class AppServiceProvider(ServiceProvider):
         """Bind services into the container."""
 
     def boot(self) -> None:
-        """Share the extension-built menu with every template."""
+        """Share the extension-built menu, honouring the hidden entries, with every template."""
         events = self.app.make("events")
 
         def navigation() -> list[dict[str, Any]]:
-            return events.apply_filters("crm.navigation", [])
+            hidden = set(setting("menu_hidden", []) or [])
+            return [item for item in events.apply_filters("crm.navigation", []) if item.get("route") not in hidden]
 
-        self.app.make("view").share("navigation", navigation)
+        view = self.app.make("view")
+        view.share("navigation", navigation)
+        view.share("setting", setting)

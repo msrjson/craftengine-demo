@@ -1,0 +1,41 @@
+{
+  "en": {
+    "settings.extension.name": "Settings",
+    "settings.nav.label": "Settings",
+    "settings.index.title": "General settings",
+    "settings.field.site_name": "Site title",
+    "settings.field.site_tagline": "Tagline",
+    "settings.field.posts_per_page": "Posts per page",
+    "settings.error.posts_per_page": "Enter a number between 1 and 100.",
+    "settings.action.save": "Save settings",
+    "settings.menus.nav": "Menus",
+    "settings.menus.title": "Menu visibility",
+    "settings.menus.lead": "Uncheck an entry to hide it from the admin menu."
+  },
+  "pt-BR": {
+    "settings.extension.name": "Configurações",
+    "settings.nav.label": "Configurações",
+    "settings.index.title": "Configurações gerais",
+    "settings.field.site_name": "Título do site",
+    "settings.field.site_tagline": "Descrição curta",
+    "settings.field.posts_per_page": "Posts por página",
+    "settings.error.posts_per_page": "Informe um número entre 1 e 100.",
+    "settings.action.save": "Salvar configurações",
+    "settings.menus.nav": "Menus",
+    "settings.menus.title": "Visibilidade do menu",
+    "settings.menus.lead": "Desmarque uma entrada para escondê-la do menu do painel."
+  },
+  "es": {
+    "settings.extension.name": "Ajustes",
+    "settings.nav.label": "Ajustes",
+    "settings.index.title": "Ajustes generales",
+    "settings.field.site_name": "Título del sitio",
+    "settings.field.site_tagline": "Descripción corta",
+    "settings.field.posts_per_page": "Entradas por página",
+    "settings.error.posts_per_page": "Ingresa un número entre 1 y 100.",
+    "settings.action.save": "Guardar ajustes",
+    "settings.menus.nav": "Menús",
+    "settings.menus.title": "Visibilidad del menú",
+    "settings.menus.lead": "Desmarca una entrada para ocultarla del menú del panel."
+  }
+}

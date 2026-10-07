@@ -11,7 +11,7 @@
   <a class="skip-link" href="#main">{{ __('crm.layout.skip_to_content') }}</a>
 
   <header class="admin-bar">
-    <a class="admin-bar__site" href="/">{{ __('crm.app.name') }}</a>
+    <a class="admin-bar__site" href="/">{{ setting('site_name') or __('crm.app.name') }}</a>
 
     <button type="button" class="admin-bar__toggle" data-menu-toggle
             aria-controls="admin-menu" aria-expanded="true">

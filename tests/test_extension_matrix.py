@@ -15,6 +15,7 @@ from starlette.testclient import TestClient
 
 from craft.container.internal_proxy import InternalProxyError
 from craft.facades import DB, Proxy, View
+from craft.support.translation import current_locale
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GENERATED = {
@@ -192,7 +193,11 @@ class TestWebhookAndTheme:
             view.set_theme_resolver(None)
 
     def test_the_module_screen_renders_translated_with_a_plural(self) -> None:
-        one = View.render("tickets::index", {"summary": {"items": 1}})
-        many = View.render("tickets::index", {"summary": {"items": 5}})
+        token = current_locale.set("pt-BR")
+        try:
+            one = View.render("tickets::index", {"summary": {"items": 1}})
+            many = View.render("tickets::index", {"summary": {"items": 5}})
+        finally:
+            current_locale.reset(token)
         assert 'data-items="1"' in one and "1 chamado<" in one
         assert 'data-items="5"' in many and "5 chamados<" in many

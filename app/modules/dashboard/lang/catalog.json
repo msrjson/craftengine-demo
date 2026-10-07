@@ -3,18 +3,45 @@
     "dashboard.extension.name": "Dashboard",
     "dashboard.nav.label": "Dashboard",
     "dashboard.index.title": "Overview",
-    "dashboard.index.empty": "No module is active yet. Activate one in the extension manager."
+    "dashboard.index.empty": "No module is active yet. Activate one in the extension manager.",
+    "dashboard.widget.glance.title": "At a Glance",
+    "dashboard.widget.activity.title": "Activity",
+    "dashboard.widget.activity.empty": "No activity yet. Schedule one from Activities.",
+    "dashboard.widget.quick_draft.title": "Quick Draft",
+    "dashboard.widget.quick_draft.contact": "Contact",
+    "dashboard.widget.quick_draft.kind": "Kind",
+    "dashboard.widget.quick_draft.subject": "Subject",
+    "dashboard.widget.quick_draft.save": "Save draft",
+    "dashboard.widget.quick_draft.none": "Add a contact before drafting."
   },
   "pt-BR": {
     "dashboard.extension.name": "Painel",
     "dashboard.nav.label": "Painel",
     "dashboard.index.title": "Visão geral",
-    "dashboard.index.empty": "Nenhum módulo ativo ainda. Ative um no gerenciador de extensões."
+    "dashboard.index.empty": "Nenhum módulo ativo ainda. Ative um no gerenciador de extensões.",
+    "dashboard.widget.glance.title": "Num relance",
+    "dashboard.widget.activity.title": "Atividade",
+    "dashboard.widget.activity.empty": "Nenhuma atividade ainda. Agende uma em Atividades.",
+    "dashboard.widget.quick_draft.title": "Rascunho rápido",
+    "dashboard.widget.quick_draft.contact": "Contato",
+    "dashboard.widget.quick_draft.kind": "Tipo",
+    "dashboard.widget.quick_draft.subject": "Assunto",
+    "dashboard.widget.quick_draft.save": "Salvar rascunho",
+    "dashboard.widget.quick_draft.none": "Cadastre um contato antes de rascunhar."
   },
   "es": {
     "dashboard.extension.name": "Panel",
     "dashboard.nav.label": "Panel",
     "dashboard.index.title": "Resumen",
-    "dashboard.index.empty": "Ningún módulo activo todavía. Activa uno en el gestor de extensiones."
+    "dashboard.index.empty": "Ningún módulo activo todavía. Activa uno en el gestor de extensiones.",
+    "dashboard.widget.glance.title": "De un vistazo",
+    "dashboard.widget.activity.title": "Actividad",
+    "dashboard.widget.activity.empty": "Todavía no hay actividad. Programa una en Actividades.",
+    "dashboard.widget.quick_draft.title": "Borrador rápido",
+    "dashboard.widget.quick_draft.contact": "Contacto",
+    "dashboard.widget.quick_draft.kind": "Tipo",
+    "dashboard.widget.quick_draft.subject": "Asunto",
+    "dashboard.widget.quick_draft.save": "Guardar borrador",
+    "dashboard.widget.quick_draft.none": "Añade un contacto antes de borrar."
   }
 }

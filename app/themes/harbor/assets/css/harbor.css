@@ -109,3 +109,25 @@ button:focus-visible, .button:focus-visible, input:focus-visible, select:focus-v
 .state-active, .state-serving { border-color: var(--accent); color: var(--accent); }
 .state-failed, .state-unavailable { border-color: var(--danger); color: var(--danger); }
 .notice { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--danger); color: var(--danger); background: var(--surface); }
+
+/* --- Dashboard widgets (WordPress-style boxes) ----------------------------- */
+.dash { display: grid; gap: var(--gap); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 64rem) {
+  .dash { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dash-widget--activity { grid-column: 2; grid-row: 1 / span 2; }
+}
+.dash-widget { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.dash-widget__head { font-size: 1rem; margin: 0; padding: 12px var(--gap); border-bottom: 1px solid var(--line); background: var(--bg); }
+.dash-widget__body { padding: var(--gap); }
+.glance { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.glance__item { display: flex; align-items: baseline; gap: var(--space-3); }
+.glance__value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 3ch; text-align: right; }
+.glance__label { color: var(--muted); }
+.feed { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.feed__item { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: var(--space-2); }
+.feed__item:last-child { border-bottom: 0; padding-bottom: 0; }
+.feed__kind { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+.feed__subject { font-weight: 600; }
+.feed__contact { color: var(--muted); font-size: .9rem; }
+.draft { display: grid; gap: var(--space-4); }
+.draft .button { justify-self: start; }

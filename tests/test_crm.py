@@ -33,7 +33,7 @@ class TestModulesCooperateThroughSeams:
     def test_every_extension_is_active_and_serving(self, crm: Any) -> None:
         status = {row["slug"]: row["availability"] for row in crm.make("extensions").status()}
         assert set(status.values()) == {"serving"}
-        assert len(status) == 15
+        assert len(status) == 16
 
     def test_contacts_get_company_names_through_the_proxy(self, crm: Any, people: dict) -> None:
         assert Proxy.call("companies", "names", [people["company"]]) == {people["company"]: "Acme Ltda"}

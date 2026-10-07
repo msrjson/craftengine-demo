@@ -1,11 +1,29 @@
 {
   "en": {
-    "harbor.extension.name": "Harbor"
+    "harbor.extension.name": "Harbor",
+    "harbor.layout.admin_menu": "Admin menu",
+    "harbor.layout.menu": "Menu",
+    "harbor.layout.view_site": "View site",
+    "harbor.layout.howdy": "Howdy, {name}",
+    "harbor.layout.account": "Account",
+    "harbor.auth.tagline": "Manage your CRM"
   },
   "pt-BR": {
-    "harbor.extension.name": "Harbor"
+    "harbor.extension.name": "Harbor",
+    "harbor.layout.admin_menu": "Menu do painel",
+    "harbor.layout.menu": "Menu",
+    "harbor.layout.view_site": "Ver site",
+    "harbor.layout.howdy": "Olá, {name}",
+    "harbor.layout.account": "Conta",
+    "harbor.auth.tagline": "Gerencie seu CRM"
   },
   "es": {
-    "harbor.extension.name": "Harbor"
+    "harbor.extension.name": "Harbor",
+    "harbor.layout.admin_menu": "Menú de administración",
+    "harbor.layout.menu": "Menú",
+    "harbor.layout.view_site": "Ver sitio",
+    "harbor.layout.howdy": "Hola, {name}",
+    "harbor.layout.account": "Cuenta",
+    "harbor.auth.tagline": "Gestiona tu CRM"
   }
 }

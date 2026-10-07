@@ -1,0 +1,41 @@
+{
+  "en": {
+    "media.extension.name": "Media",
+    "media.nav.label": "Media",
+    "media.card.total": "Files",
+    "media.index.title": "Media library",
+    "media.index.empty": "No files yet. Upload the first one.",
+    "media.action.upload": "Upload",
+    "media.field.file": "File",
+    "media.kind.document": "DOC",
+    "media.error.file": "Choose a file to upload.",
+    "media.error.mimes": "Allowed types: JPG, PNG, GIF, WebP, SVG and PDF.",
+    "media.error.size": "The file is larger than 5 MB."
+  },
+  "pt-BR": {
+    "media.extension.name": "Mídia",
+    "media.nav.label": "Mídia",
+    "media.card.total": "Arquivos",
+    "media.index.title": "Biblioteca de mídia",
+    "media.index.empty": "Nenhum arquivo ainda. Envie o primeiro.",
+    "media.action.upload": "Enviar",
+    "media.field.file": "Arquivo",
+    "media.kind.document": "DOC",
+    "media.error.file": "Escolha um arquivo para enviar.",
+    "media.error.mimes": "Tipos aceitos: JPG, PNG, GIF, WebP, SVG e PDF.",
+    "media.error.size": "O arquivo passa de 5 MB."
+  },
+  "es": {
+    "media.extension.name": "Medios",
+    "media.nav.label": "Medios",
+    "media.card.total": "Archivos",
+    "media.index.title": "Biblioteca de medios",
+    "media.index.empty": "Todavía no hay archivos. Sube el primero.",
+    "media.action.upload": "Subir",
+    "media.field.file": "Archivo",
+    "media.kind.document": "DOC",
+    "media.error.file": "Elige un archivo para subir.",
+    "media.error.mimes": "Tipos permitidos: JPG, PNG, GIF, WebP, SVG y PDF.",
+    "media.error.size": "El archivo supera los 5 MB."
+  }
+}

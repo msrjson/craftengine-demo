@@ -57,7 +57,7 @@ def _post(client: Any, form_url: str, url: str, data: dict) -> Any:
 
 @pytest.mark.parametrize("url", [
     "/overview", "/companies", "/companies/create", "/contacts", "/contacts/create", "/deals",
-    "/deals/create", "/activities", "/activities/create", "/posts", "/posts/create", "/admin/extensions", "/admin/audit",
+    "/deals/create", "/activities", "/activities/create", "/posts", "/posts/create", "/pages", "/pages/create", "/admin/extensions", "/admin/audit",
 ])
 def test_every_screen_renders_with_the_theme(admin: Any, url: str) -> None:
     response = admin.get(url)

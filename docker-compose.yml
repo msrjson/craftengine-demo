@@ -1,4 +1,4 @@
-# The CRM demo, its own context: own repository, own containers, own database.
+# The demo application, its own context: own repository, own containers, own database.
 # Validating the framework never starts these, and these never mount the
 # framework (owner ruling 2026-10-05).
 #

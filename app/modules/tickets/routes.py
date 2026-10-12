@@ -9,5 +9,5 @@ def register(router: object) -> None:
     Args:
         router: The application router.
     """
-    router.get("/tickets", [TicketsController, "index"]).name("tickets.index")
+    router.get("/tickets", [TicketsController, "index"]).name("tickets.index").middleware("auth")
     # make:screen adds routes above this line.

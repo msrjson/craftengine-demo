@@ -85,6 +85,16 @@ class TestGeneratedAndDecoupled:
         assert {row["locale"] for row in rows} == {"en", "pt-BR", "es"}
 
 
+class TestGeneratedScreensRequireSignIn:
+    @pytest.mark.parametrize("slug", ["tickets", "invoices"])
+    def test_a_guest_is_sent_to_sign_in(self, crm: Any, slug: str) -> None:
+        from bootstrap.app import app, asgi_app
+
+        base_url = str(app.make("config").get("app.APP_URL", "http://testserver") or "http://testserver").rstrip("/")
+        guest = TestClient(asgi_app, follow_redirects=False, base_url=base_url)
+        assert guest.get(f"/{slug}").status_code in (302, 303)
+
+
 class TestCooperationWithoutCoupling:
     def test_a_ticket_and_an_invoice_are_counted_by_the_plugin_through_events(self) -> None:
         before = _digest()

@@ -24,7 +24,7 @@
     "extension_manager.action.activate": "Activate",
     "extension_manager.action.deactivate": "Deactivate",
     "extension_manager.action.uninstall": "Uninstall",
-    "extension_manager.theme.title": "Look of the CRM",
+    "extension_manager.theme.title": "Look of the admin",
     "extension_manager.theme.label": "Active theme",
     "extension_manager.theme.save": "Use this theme"
   },
@@ -53,7 +53,7 @@
     "extension_manager.action.activate": "Ativar",
     "extension_manager.action.deactivate": "Desativar",
     "extension_manager.action.uninstall": "Desinstalar",
-    "extension_manager.theme.title": "Visual do CRM",
+    "extension_manager.theme.title": "Visual do painel",
     "extension_manager.theme.label": "Tema ativo",
     "extension_manager.theme.save": "Usar este tema"
   },
@@ -82,7 +82,7 @@
     "extension_manager.action.activate": "Activar",
     "extension_manager.action.deactivate": "Desactivar",
     "extension_manager.action.uninstall": "Desinstalar",
-    "extension_manager.theme.title": "Apariencia del CRM",
+    "extension_manager.theme.title": "Apariencia del panel",
     "extension_manager.theme.label": "Tema activo",
     "extension_manager.theme.save": "Usar este tema"
   }

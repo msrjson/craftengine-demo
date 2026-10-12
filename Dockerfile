@@ -1,4 +1,4 @@
-# Craft Engine CRM demo - the engine comes from the canonical remote, pinned to
+# Craft Engine demo - the engine comes from the canonical remote, pinned to
 # a release tag. The demo never copies, links or mounts the framework sources:
 # a framework change reaches it only through a release.
 FROM python:3.14-slim
